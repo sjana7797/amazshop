@@ -1,0 +1,33 @@
+.subtotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: max-content;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #dddddd;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 3px;
+    &__gift {
+        @include centerFlexAlign;
+        &>input {
+            margin-right: 5px;
+        }
+    }
+    &>button {
+        background: $primary-color;
+        border-radius: 2px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid;
+        margin-top: 10px;
+        border-color: darken($primary-color, $amount: 10) darken($primary-color, $amount: 20) darken($primary-color, $amount: 50);
+        color: #111;
+        padding: 3px;
+        text-transform: capitalize;
+        &:hover {
+            background: darken($primary-color, 10);
+        }
+    }
+}

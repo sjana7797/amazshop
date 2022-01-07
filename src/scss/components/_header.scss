@@ -1,0 +1,72 @@
+.header {
+    height: 60px;
+    @include centerFlexAlign;
+    background-color: $header-color;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    &__logo {
+        @include centerFlexAlign;
+        color: $primary-color;
+        margin: 0 25px;
+        &_icon {
+            margin-right: 10px;
+        }
+        &_title {
+            text-decoration: none;
+            border: 0;
+            color: white;
+        }
+    }
+    &__search {
+        @include centerFlexAlign;
+        flex: 1;
+        margin: 0 20px;
+        &_bar {
+            height: 35px;
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 0 10px;
+        }
+        &_icon {
+            min-width: 35px !important;
+            padding: 3px;
+            height: 35px !important;
+            background-color: $primary-color;
+        }
+    }
+    &__nav {
+        @include centerFlexJustify(space-evenly);
+        &__item {
+            @include display(flex);
+            flex-direction: column;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: whitesmoke;
+            cursor: pointer;
+            &_line {
+                &_one {
+                    font-style: 10px;
+                }
+                &_two {
+                    font-style: 13px;
+                    font-weight: 800;
+                }
+            }
+            &_basket {
+                @include centerFlexAlign;
+                justify-content: center;
+                padding: 10px;
+                cursor: pointer;
+                color: whitesmoke;
+                margin-right: 50px;
+                margin-left: 10px;
+                &_count {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

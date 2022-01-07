@@ -1,0 +1,32 @@
+.checkout__product {
+    @include display(flex);
+    margin: 20px 0;
+    &_info {
+        padding-left: 20px;
+    }
+    &_btn {
+        background: $primary-color;
+        border: 1px solid;
+        margin-top: 10px;
+        border-color: darken($primary-color, $amount: 10) darken($primary-color, $amount: 20) darken($primary-color, $amount: 50);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    &_img {
+        object-fit: contain;
+        width: 180px;
+        height: 180px;
+        border-radius: 8px;
+    }
+    &_title {
+        font-size: 17px;
+        font-weight: 800;
+        padding: 5px 0;
+    }
+    &_rating {
+        padding: 5px 0;
+    }
+    &_price {
+        padding: 5px 0;
+    }
+}

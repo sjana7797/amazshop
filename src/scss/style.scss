@@ -1,0 +1,68 @@
+/* importing Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap");
+
+/* importing Fonts */
+
+
+/* importing variables */
+
+@import "./variables/color"; //color variable
+
+/* importing variables */
+
+
+/* importing mixins */
+
+@import "./mixins/mixins"; //mixins
+
+/* importing mixins */
+
+
+/* Base */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(234, 237, 237);
+}
+
+
+/* Base */
+
+
+/* Spinner */
+
+.loading-spinner {
+    width: 100%;
+    @include centerFlex;
+    .spinner {
+        animation: spin 1s infinite;
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+/* Spinner */
+
+
+/*importing components*/
+
+@import "./components/header";
+@import "./components/home";
+@import "./components/products";
+@import "./components/checkout";
+
+/*importing components*/

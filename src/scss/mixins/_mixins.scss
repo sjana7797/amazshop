@@ -1,0 +1,18 @@
+@mixin display($display) {
+    display: $display;
+}
+
+@mixin centerFlexAlign($align: center) {
+    @include display(flex);
+    align-items: $align;
+}
+
+@mixin centerFlexJustify($justify: center) {
+    @include display(flex);
+    justify-content: $justify;
+}
+
+@mixin centerFlex($justify: center, $align: center) {
+    @include centerFlexJustify($justify);
+    @include centerFlexAlign($align);
+}
